@@ -1,0 +1,18 @@
+.home-container {
+  width: 100%;
+  max-width: 600px;
+  height: 300px; /* adjust height based on how much of the avatar you want to show */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* pulls it up closer to resume button */
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    height: 350px;
+    margin: -1rem auto 1rem auto;
+  }
+}

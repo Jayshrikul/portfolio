@@ -1,0 +1,47 @@
+.intro-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.intro-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 800px;
+  width: 100%;
+}
+
+.intro-text h1 {
+  font-size: 2.8rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.intro-text .subtitle {
+  font-size: 1.2rem;
+  color: #ddd;
+  max-width: 600px;
+}
+
+.intro-avatar {
+  margin-top: auto;
+  padding-top: 2rem;
+  max-width: 320px;
+}
+
+@media (max-width: 768px) {
+  .intro-text h1 {
+    font-size: 2rem;
+  }
+
+  .intro-avatar {
+    max-width: 240px;
+  }
+}

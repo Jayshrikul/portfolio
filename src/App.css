@@ -1,38 +1,192 @@
+/* Reset & Base Styles */
+.intro-section {
+  padding-top: 120px; /* Adjust based on navbar height */
+}
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+  color: #ffffff;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Night-sky starry effect */
+body::before {
+  content: "";
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background: url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
+  opacity: 0.04;
+  animation: drift 120s linear infinite;
+  z-index: 0;
+}
+
+@keyframes drift {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-100px, -100px); }
+}
+
+/* App container */
 .App {
-  text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Theme toggle button */
+.theme-toggle {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 99;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+.theme-toggle:hover {
+  transform: scale(1.2);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Hero / Intro section */
+.intro-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  padding: 2rem;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.intro-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.highlight-name {
+  background: linear-gradient(45deg, #ff6ec4, #7873f5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.intro-content p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-bottom: 1.5rem;
+  color: #dcdcdc;
+}
+
+/* Call to Action */
+.cta-button {
+  background: linear-gradient(135deg, #ff6ec4, #7873f5);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(255, 110, 196, 0.4);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.cta-button:hover {
+  box-shadow: 0 6px 30px rgba(255, 110, 196, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Avatar styling */
+.avatar-wrapper {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+.avatar-wrapper {
+  margin-top: 1rem;
+}
+
+
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #fff;
+}
+
+h3.typing-text {
+  font-size: 1.4rem;
+  color: #aaa;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #ffb6ff;
+}
+
+/* Profile image in About section */
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 15px rgba(255, 182, 255, 0.3);
+}
+
+/* Resume download button */
+.resume-btn {
+  margin-top: 1.5rem;
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  background: linear-gradient(135deg, #72edf2 10%, #5151e5 100%);
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 20px rgba(114, 237, 242, 0.4);
+}
+.resume-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 30px rgba(114, 237, 242, 0.6);
+}
+
+/* Footer or Contact styling */
+footer, .contact-section {
+  background-color: #1b1b2f;
+  text-align: center;
+  padding: 2rem;
+  color: #aaa;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .intro-content h1 {
+    font-size: 2.2rem;
   }
-  to {
-    transform: rotate(360deg);
+
+
+  .cta-button {
+    font-size: 0.9rem;
   }
+
+  section {
+    padding: 4rem 1rem;
+  }
+}
+  .avatar-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }

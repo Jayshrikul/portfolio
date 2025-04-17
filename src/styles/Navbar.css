@@ -1,0 +1,38 @@
+/* Navbar.css */
+
+/* Add top padding to body content to prevent overlap from navbar */
+body {
+  padding-top: 100px; /* Adjust based on navbar height */
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(25, 25, 112, 0.7);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.navbar li a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navbar li a:hover {
+  color: #ffd700;
+  text-shadow: 0 0 5px #fff;
+}
